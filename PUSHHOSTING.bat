@@ -9,10 +9,11 @@ if not exist ".git" (
     git remote set-url origin https://github.com/adriansga/magmet5.git
 )
 
-git pull origin main --no-rebase
+git branch -M main
+git pull origin main --no-rebase 2>nul
 git add .
 git commit -m "Aktualizacja %date% %time%"
-git push origin main
+git push -u origin main
 echo.
 echo Gotowe! Strona zaktualizowana.
 pause
