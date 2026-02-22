@@ -3081,10 +3081,28 @@ body {
         flex-direction: column;
         background: rgba(10, 10, 10, 0.98);
         width: 100%;
-        padding: 40px;
-        gap: 20px;
+        padding: 0;
+        gap: 0;
         transition: right 0.3s ease;
         border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+        max-height: calc(100vh - 70px);
+        overflow-y: auto;
+    }
+
+    .nav-links li {
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+    }
+
+    .nav-links li:last-child {
+        border-bottom: none;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 15px 20px;
+        font-size: 14px;
+        text-align: left;
     }
 
     .nav-links.active {
